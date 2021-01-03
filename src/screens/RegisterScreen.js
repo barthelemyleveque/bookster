@@ -11,11 +11,13 @@ import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 import { nameValidator } from '../helpers/nameValidator'
+import { userNameValidator } from '../helpers/userNameValidator'
 import { signInUser } from '../api/auth-api'
 import Toast from '../components/Toast'
 
 const RegisterScreen = ({ navigation }) => {
   const [name, setName] = useState({ value: '', error: '' })
+  const [userName, setUserName] = useState({ value: '', error: '' })
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
   const [loading, setLoading] = useState()
@@ -24,11 +26,13 @@ const RegisterScreen = ({ navigation }) => {
   const onSignUpPressed = async () => {
     const nameError = nameValidator(name.value)
     const emailError = emailValidator(email.value)
+    const userNameError = await userNameValidator(userName.value)
     const passwordError = passwordValidator(password.value)
-    if (emailError || passwordError || nameError) {
+    if (emailError || passwordError || nameError || userNameError) {
       setName({ ...name, error: nameError })
       setEmail({ ...email, error: emailError })
       setPassword({ ...password, error: passwordError })
+      setUserName({...userName, error: userNameError})
       return
     }
     setLoading(true)
@@ -36,6 +40,7 @@ const RegisterScreen = ({ navigation }) => {
       name: name.value,
       email: email.value,
       password: password.value,
+      userName: userName.value,
     })
     if (response.error) {
       setError(response.error)
@@ -49,12 +54,22 @@ const RegisterScreen = ({ navigation }) => {
       <Logo />
       <Header>Créer un compte</Header>
       <TextInput
-        label="Nom"
+        label="Nom complet"
         returnKeyType="next"
         value={name.value}
         onChangeText={(text) => setName({ value: text, error: '' })}
         error={!!name.error}
         errorText={name.error}
+      />
+      <TextInput
+        label="Nom d'utilisateur"
+        returnKeyType="next"
+        autoCapitalize="none"
+        autoCorrect={false}
+        value={userName.value}
+        onChangeText={(text) => setUserName({ value: text, error: '' })}
+        error={!!userName.error}
+        errorText={userName.error}
       />
       <TextInput
         label="Email"

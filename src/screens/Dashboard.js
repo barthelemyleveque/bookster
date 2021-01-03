@@ -6,7 +6,7 @@ import Paragraph from '../components/Paragraph'
 import Button from '../components/Button'
 import { logoutUser } from '../api/auth-api'
 
-const Dashboard = () => (
+const Dashboard = ({ navigation }) => (
   <Background>
     <Logo />
     <Header>Let’s start</Header>
