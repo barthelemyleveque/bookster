@@ -1,11 +1,10 @@
 // Replace with your own firebase config!
 export const FIREBASE_CONFIG = {
-  apiKey: 'AIzaSyBDsdN3XWM5D2-c_ti5j44GrhMnBHNmSF0',
-  authDomain: 'react-native-market-2861b.firebaseapp.com',
-  databaseURL: 'https://react-native-market-2861b.firebaseio.com',
-  projectId: 'react-native-market-2861b',
-  storageBucket: 'react-native-market-2861b.appspot.com',
-  messagingSenderId: '878215484396',
-  appId: '1:878215484396:web:c36074bccb0b5693b0a6c9',
-  measurementId: 'G-317PLP59P2',
-}
+  apiKey: "AIzaSyASO4K9_CjKUv53XEzakJWyOR96-DNj86Q",
+  authDomain: "bookster-d06f9.firebaseapp.com",
+  projectId: "bookster-d06f9",
+  storageBucket: "bookster-d06f9.appspot.com",
+  messagingSenderId: "677112757263",
+  appId: "1:677112757263:web:4eb89b8bf3aab3cf78f77a",
+  measurementId: "G-GXE3QV4RXE"
+};

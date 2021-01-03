@@ -1,4 +1,4 @@
 export function passwordValidator(password) {
-  if (!password || password.length <= 0) return "Password can't be empty."
+  if (!password || password.length <= 0) return "Le mot de passe ne peut pas être vide."
   return ''
 }

@@ -8,9 +8,9 @@ import Paragraph from '../components/Paragraph'
 const StartScreen = ({ navigation }) => (
   <Background>
     <Logo />
-    <Header>Login Template</Header>
+    <Header>Bienvenue</Header>
     <Paragraph>
-      The easiest way to start with your amazing application.
+      Rejoignez Bookster et retrouvez tous vos meilleurs moments de lecture, au même endroit.
     </Paragraph>
     <Button mode="contained" onPress={() => navigation.navigate('LoginScreen')}>
       Login
