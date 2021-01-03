@@ -1,12 +1,16 @@
 import React from 'react'
 import Background from '../components/Background'
-import { View, TextInput, StyleSheet, Text } from 'react-native';
+import { View, TextInput, StyleSheet, Text, } from 'react-native';
 import AuthLoadingScreen from './AuthLoadingScreen';
 import { Feather } from '@expo/vector-icons'; 
 
 import { AntDesign } from '@expo/vector-icons'; 
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { ScrollView } from 'react-native-gesture-handler';
+
+import Button from '../components/Button'
+import { logoutUser } from '../api/auth-api'
+
 
 
 
@@ -18,6 +22,11 @@ const Dashboard = ({ navigation }) => (
       <Text style={styles.textMain}>books</Text>
       <Feather name="search" style={styles.iconSearch} size={35}/>
     </View>
+
+    <Button mode="outlined" onPress={logoutUser}>
+      Logout
+    </Button>
+
 
     <ScrollView>
       <Text>BOOK</Text>
@@ -35,11 +44,14 @@ const Dashboard = ({ navigation }) => (
     </ScrollView>
 
 
+
     <View style={styles.bottomNav}>
       <Feather style={styles.bottomIcon} name="book" size={35} color="white" /> 
       <AntDesign style={styles.bottomIcon} name="pluscircleo" size={35} color="white" />
       <MaterialCommunityIcons style={styles.bottomIcon} name="account-circle-outline" size={35} color="white" />
     </View>
+
+
   </View>
 )
 const styles = StyleSheet.create({
