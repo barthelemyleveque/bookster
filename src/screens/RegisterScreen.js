@@ -52,7 +52,7 @@ const RegisterScreen = ({ navigation }) => {
     <Background>
       <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Créer un compte</Header>
+      <Header>Ouvrez votre bibliothèque</Header>
       <TextInput
         label="Nom complet"
         returnKeyType="next"
