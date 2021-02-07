@@ -28,7 +28,8 @@
     "react-native-screens": "~2.10.1",
     "react-native-status-bar-height": "^2.6.0",
     "react-native-unimodules": "~0.11.0",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "react-svg": "^11.2.3"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
