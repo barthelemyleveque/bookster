@@ -1,9 +1,6 @@
 import React from 'react'
 import { Image, View, StyleSheet, Text, } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
 
-const colors = ["#001f3f", "#001f3f", "#7FDBFF", "#39CCCC", "#3D9970", "#2ECC40", "#01FF70", "#FFDC00", "#FF851B", "#FF4136", "#85144b", "#F012BE", "#B10DC9", "#111111", "#AAAAAA", "#DDDDDD",]
-const font_colors = ["#80BEFF", "#B3DBFF", "#004A66", "#000000", "#173728", "#0F3E13", "#00662D", "#675800", "#663100", "#AB1C11", "#E373A9", "#65064F", "#EFAAF9", "#909090", "#000000", "#000000" ]
 
 const BookCard = () => (
     <View style={styles.container}>

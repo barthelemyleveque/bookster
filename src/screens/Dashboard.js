@@ -14,6 +14,9 @@ const Dashboard = ({ navigation }) => (
   <View style={styles.containerMain}>
     <TopBar />
     
+    <Button mode="outlined" onPress={logoutUser}>
+      Logout
+    </Button>
 
 
     <ScrollView style={styles.bookList}> 
@@ -25,11 +28,8 @@ const Dashboard = ({ navigation }) => (
 
 
 
-    <Button mode="outlined" onPress={logoutUser}>
-      Logout
-    </Button>
 
-    <BottomBar />
+    <BottomBar navigation={navigation}/>
 
 
 

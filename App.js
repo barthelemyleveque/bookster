@@ -14,6 +14,7 @@ import {
   ForgotPasswordScreen,
   Dashboard,
 } from './src/screens'
+import CameraScreen from './src/screens/Camera'
 import { FIREBASE_CONFIG } from './src/core/config'
 
 const Stack = createStackNavigator()
@@ -38,6 +39,7 @@ const App = () => {
           <Stack.Screen options={{headerShown:false}} name="StartScreen" component={StartScreen} />
           <Stack.Screen name="LoginScreen" options={{headerShown:false}}  component={LoginScreen} />
           <Stack.Screen name="RegisterScreen" options={{headerShown:false}}   component={RegisterScreen} />
+          <Stack.Screen name="CameraScreen" component={CameraScreen} />
           <Stack.Screen name="Dashboard"  component={Dashboard} 
                         options={{
                           title: <Image 
